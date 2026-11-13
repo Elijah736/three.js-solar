@@ -53,9 +53,12 @@ sphere2.scale.set(7, 7, 7);
 
 const earthMap = loader.load(earthtexture);
 const sunMap = loader.load(sun);
+const starMap = loader.load(stars)
 
 earthMap.wrapS = THREE.RepeatWrapping;
 earthMap.wrapT = THREE.RepeatWrapping;
+starMap.wrapS = THREE.RepeatWrapping;
+starMap.wrapT = THREE.RepeatWrapping;
 sunMap.wrapS = THREE.RepeatWrapping;
 sunMap.wrapT = THREE.RepeatWrapping;
 
@@ -84,6 +87,7 @@ function animate() {
 
     earthMap.offset.x += 0.005;
     sunMap.offset.x += 0.02;
+    starMap.offset.x += 0.02;
 
     controls.update();
 
